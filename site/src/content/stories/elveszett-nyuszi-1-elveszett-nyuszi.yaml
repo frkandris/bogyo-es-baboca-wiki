@@ -1,0 +1,49 @@
+id: "elveszett-nyuszi-1-elveszett-nyuszi"
+title: "Mese az elveszett nyusziról"
+volume: "elveszett-nyuszi"
+order: 1
+pageStart: 4
+pageEnd: 27
+summary: "Egy nyári napon az erdő lakói színes léghajóval indulnak kirándulni, és Babóca magával viszi kedvenc lila játéknyusziját. A magasban feltámad a szél, és kisodorja a nyuszit a katicalány kezéből. Az egész erdő összefog a keresésben: Bogyó, Baltazár, Sün Soma, a Hangyakirálynő, Bagolydoktor, a Szivárványhalak és sokan mások is kutatnak utána, de estére sem kerül elő. Bogyó, a legjobb barát, egész éjjel dolgozik, és egy új, szürke nyuszit varr Babócának. Másnap Baltazár mégis megtalálja az igazi lila nyuszit egy tölgyfa tetején, így a két jó barát végül elcseréli a két nyuszit, és nagy lakomával ünnepelnek."
+characters:
+  - "baboca"
+  - "bogyo"
+  - "baltazar"
+  - "vendel"
+  - "ugri"
+  - "gombi"
+  - "pihe"
+  - "dome"
+  - "szello"
+  - "csiga-csaba"
+  - "lili"
+  - "sun-soma"
+  - "hangyakiralyno"
+  - "bagolydoktor"
+  - "szazlabu"
+  - "szivarvanyhalak"
+  - "barlangi-pok"
+  - "alfonz"
+  - "szentjanosbogarak"
+locations:
+  - "erdo"
+  - "ret"
+  - "domb"
+  - "patak"
+  - "fenyoerdo"
+  - "bogyo-haza"
+  - "baboca-haza"
+objects:
+  - "leghajo"
+  - "nyuszi"
+  - "hegedu"
+themes:
+  - "baratsag"
+  - "segites"
+  - "kirandulas"
+  - "alkotas"
+  - "osztozkodas"
+  - "gondoskodas"
+seasons:
+  - "nyar"
+holidays: []

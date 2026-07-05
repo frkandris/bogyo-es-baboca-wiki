@@ -1,0 +1,33 @@
+id: "a-jegen-1-az-elveszett-mogyoro"
+title: "Az elveszett mogyoró"
+volume: "a-jegen"
+order: 1
+pageStart: 1
+pageEnd: 22
+summary: "A tél beállta előtt Bogyó és Babóca elköszönnek Mókus Regőtől, ám kiderül, hogy a mókus éléskamrája teljesen üres: a három csintalan szúbogár véletlenül megrágta a fatörzset, és a mogyoró, makk meg dió legurult a domboldalon. A barátok és az egész erdő népe összefog, hosszú sorba állnak, és kézről kézre adogatva visszahordják a csemegéket Regő odújába. Mire feljön a hold, újra teli a kamra, és a hálás mókus boldogan tér téli álomra."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "mokus-rego"
+  - "szubogarak"
+  - "baltazar"
+  - "pihe"
+  - "dome"
+  - "szello"
+  - "gombi"
+  - "lili"
+  - "vendel"
+locations:
+  - "erdo"
+  - "tolgyfa"
+  - "domb"
+objects:
+  - "trombita"
+themes:
+  - "baratsag"
+  - "segites"
+  - "kitartas"
+  - "termeszet"
+seasons:
+  - "tel"
+holidays: []

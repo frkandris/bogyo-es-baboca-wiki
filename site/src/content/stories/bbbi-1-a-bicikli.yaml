@@ -1,0 +1,28 @@
+id: "bbbi-1-a-bicikli"
+title: "A bicikli"
+volume: "a-bicikli"
+order: 1
+pageStart: 2
+pageEnd: 18
+summary: "Egy nyári napon a postagalamb nagy, piros csomagot hoz Bogyónak és Babócának a Százlábútól, aki hamarosan látogatóba érkezik. A két jó barát azon kezd civakodni, kié legyen az ajándék, végül duzzogva a réten hagyják a félig kicsomagolt biciklit. Baltazár és Pihe tolják oda nekik, ekkor derül ki, hogy tandembicikli, amin ketten is elférnek, így Bogyó és Babóca megbékél. Mivel a nagy veszekedésben elfelejtettek ajándékot készíteni, a négy jó barát színes szélforgót fabrikál virágszirmokból, és épp elkészülnek, mire a Százlábú egérfogaton megérkezik."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "baltazar"
+  - "pihe"
+  - "szazlabu"
+  - "kukac"
+  - "kiseger"
+locations:
+  - "ret"
+objects:
+  - "bicikli"
+  - "szelforgo"
+themes:
+  - "veszekedes-kibekules"
+  - "osztozkodas"
+  - "baratsag"
+  - "alkotas"
+seasons:
+  - "nyar"
+holidays: []

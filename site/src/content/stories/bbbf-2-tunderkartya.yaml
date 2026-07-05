@@ -1,0 +1,31 @@
+id: "bbbf-2-tunderkartya"
+title: "Tündérkártya"
+volume: "buborekot-fuj"
+order: 2
+pageStart: 31
+pageEnd: 52
+summary: "Pihe kedvenc tündéres memóriakártyáit Vendel biztatására Baltazár összefirkálja zöld filctollal. Amikor kiderül a csíny, a fiúk hiába próbálják kiradírozni a firkákat, csak kilyukasztják a lapokat. Babóca ötletére új kártyákat készítenek: ő lerajzolja a tündéreket, a fiúk pedig gondosan kiszínezik. A fiúk bocsánatot kérnek Pihétől, aki megbékél, és késő estig együtt kártyáznak az új paklival."
+characters:
+  - "pihe"
+  - "ugri"
+  - "lili"
+  - "szello"
+  - "baboca"
+  - "vendel"
+  - "baltazar"
+  - "bogyo"
+  - "mokus-rego"
+locations:
+  - "ret"
+  - "baboca-haza"
+objects:
+  - "tunderkartya"
+  - "filctoll"
+themes:
+  - "veszekedes-kibekules"
+  - "bocsanatkeres"
+  - "alkotas"
+  - "jatszas"
+seasons:
+  - "osz"
+holidays: []

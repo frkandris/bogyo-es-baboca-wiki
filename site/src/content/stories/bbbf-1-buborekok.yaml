@@ -1,0 +1,32 @@
+id: "bbbf-1-buborekok"
+title: "Buborékok"
+volume: "buborekot-fuj"
+order: 1
+pageStart: 7
+pageEnd: 28
+summary: "A kis rovarok buborékfújó-versenyt tartanak, és Kata, Babóca sárga hátú rokona fújja a legnagyobb buborékokat. Ugri irigységből kicsúfolja Katát, amiért nem piros a háta, mire a katicalány sírva fakad. Kelemen, a madár tanácsára Ugri belátja a hibáját, és bocsánatkérésül a saját buborékfújóját ajándékozza a katicalánynak. A két barát kibékül, és késő estig együtt ültetnek virágot."
+characters:
+  - "ugri"
+  - "szello"
+  - "bogyo"
+  - "gombi"
+  - "kata"
+  - "baboca"
+  - "kelemen"
+  - "sun-soma"
+  - "barlangi-pok"
+  - "pihe"
+locations:
+  - "ret"
+  - "to"
+objects:
+  - "buborekfujo"
+themes:
+  - "veszekedes-kibekules"
+  - "bocsanatkeres"
+  - "verseny"
+  - "jatszas"
+  - "baratsag"
+seasons:
+  - "nyar"
+holidays: []

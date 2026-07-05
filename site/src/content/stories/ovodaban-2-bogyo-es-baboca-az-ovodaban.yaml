@@ -1,0 +1,39 @@
+id: "ovodaban-2-bogyo-es-baboca-az-ovodaban"
+title: "Bogyó és Babóca az óvodában"
+volume: "ovodaban"
+order: 2
+pageStart: 26
+pageEnd: 46
+summary: "Egy őszi reggelen Babóca beszól Bogyóért, és együtt indulnak az óvodába, ahol már várják őket a barátaik. Dongó néni tornaórát, körjátékot és falevélképeket tanít nekik, majd szabad játék következik: a fiúk autóversenyt játszanak, és nem engedik be Babócát, a lányok pedig babáznak, és Bogyót nem veszik be. Bogyó összevész Egonnal, Babóca pedig elsírja magát, de végül mindenki kibékül és együtt játszik tovább. Ebéd, mesedélután és a kertben töltött játék után a gyerekek nehezen búcsúznak egymástól, alig várva a másnapi találkozást."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "baltazar"
+  - "pihe"
+  - "vendel"
+  - "dome"
+  - "szello"
+  - "alfonz"
+  - "ugri"
+  - "gombi"
+  - "egon"
+  - "dongo-neni"
+  - "pettyes-futrinka"
+locations:
+  - "ovoda"
+  - "bogyo-haza"
+objects:
+  - "jatekauto"
+  - "baba"
+  - "csuszda"
+  - "hinta"
+themes:
+  - "ovoda"
+  - "jatszas"
+  - "veszekedes-kibekules"
+  - "osztozkodas"
+  - "baratsag"
+  - "evszakok"
+seasons:
+  - "osz"
+holidays: []

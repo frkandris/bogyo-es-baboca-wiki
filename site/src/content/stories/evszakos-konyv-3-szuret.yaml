@@ -1,0 +1,40 @@
+id: "evszakos-konyv-3-szuret"
+title: "Szüret"
+volume: "evszakos-konyv"
+order: 3
+pageStart: 59
+pageEnd: 81
+summary: "Ősszel Bogyó és Babóca tandembiciklivel indulnak a Százlábúhoz, hogy segítsenek leszedni a szőlőt, de útközben kipukkad a kerekük. Kalandos úton jutnak célba: előbb Soma, a sün gesztenyehintója, majd egy ugrabugráló béka, végül a hangyák színes kisvonata viszi tovább a társaságot. Több napig tartó közös munkával leszüretelik és kitapossák a szőlőt, este pedig énekelve, táncolva ünneplik a jó termést."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "vendel"
+  - "gombi"
+  - "lili"
+  - "baltazar"
+  - "sun-soma"
+  - "beka"
+  - "hangyakiralyno"
+  - "hangyagyerekek"
+  - "szazlabu"
+locations:
+  - "erdo"
+  - "domb"
+  - "tolgyfa"
+  - "hegy"
+  - "szazlabu-haza"
+objects:
+  - "tandembicikli"
+  - "gesztenyehinto"
+  - "vonat"
+  - "papirsarkany"
+themes:
+  - "segites"
+  - "baratsag"
+  - "utazas"
+  - "termeszet"
+  - "kirandulas"
+  - "osztozkodas"
+seasons:
+  - "osz"
+holidays: []

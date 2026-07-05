@@ -1,0 +1,44 @@
+id: "enekel-2-a-hangyak-korusa"
+title: "A hangyák kórusa"
+volume: "enekel"
+order: 2
+pageStart: 31
+pageEnd: 53
+summary: "Az erdő lakói úgy döntenek, hogy ünnepi koncerttel búcsúztatják az óévet, és Bagolydoktor lesz a karmester. Bogyó, Babóca és barátaik apró kacatokból saját hangszereket, csörgőket és csengőket készítenek. Milla hóbogár azonban a szánkóútján elveszíti a csengettyűkkel teli ládáját, ezért mindenki keresésre indul. Bagolydoktor végül a magasból veszi észre és szedi össze a hóban csillogó csengőket, így a hangyakórus és a szentjánosbogarak vidám énekszóval köszöntik az Új Évet."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "baltazar"
+  - "pihe"
+  - "vendel"
+  - "gombi"
+  - "milla"
+  - "bagolydoktor"
+  - "hangyakiralyno"
+  - "hangyagyerekek"
+  - "szazlabu"
+  - "szentjanosbogarak"
+  - "dome"
+  - "ugri"
+  - "szello"
+  - "lili"
+  - "barlangi-pok"
+  - "kukac"
+locations:
+  - "erdo"
+  - "pihe-haza"
+  - "domb"
+objects:
+  - "csengettyu"
+  - "csorgo"
+  - "szanko"
+themes:
+  - "unnep"
+  - "zene"
+  - "alkotas"
+  - "baratsag"
+  - "segites"
+seasons:
+  - "tel"
+holidays:
+  - "uj-ev"

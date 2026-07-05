@@ -1,0 +1,33 @@
+id: "evszakos-konyv-1-baboca-viragai"
+title: "Babóca virágai"
+volume: "evszakos-konyv"
+order: 1
+pageStart: 7
+pageEnd: 31
+summary: "Babóca izgatottan várja, hogy kibújjanak frissen ültetett tulipánjai, ám a fiúk barkácsolt gördeszkája megbokrosodik, és Baltazár végigszáguldva letarolja a katicalány kis kertjét. A barátok bűnbánóan törik a fejüket, majd Pihe ötletére éjszaka, a szentjánosbogarak fényénél átültetik Pihe tulipánjait Babóca háza elé. Reggel a katicalány boldogan fedezi fel az új virágokat, és épp megérkezik hozzá unokatestvére, Kata is."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "baltazar"
+  - "vendel"
+  - "pihe"
+  - "kata"
+  - "kelemen"
+  - "szentjanosbogarak"
+locations:
+  - "baboca-haza"
+  - "ret"
+  - "domb"
+  - "pihe-haza"
+objects:
+  - "gordeszka"
+  - "tulipan"
+themes:
+  - "termeszet"
+  - "segites"
+  - "baratsag"
+  - "gondoskodas"
+  - "rokonok"
+seasons:
+  - "tavasz"
+holidays: []

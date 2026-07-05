@@ -1,0 +1,50 @@
+id: "evszakos-konyv-4-hobagoly"
+title: "Hóbagoly"
+volume: "evszakos-konyv"
+order: 4
+pageStart: 83
+pageEnd: 107
+summary: "Egy havas napon Bogyó, Babóca, Vendel és Baltazár hógolyózni indulnak, de Vendel és Baltazár összekapnak, mert Baltazár mindenben utánozza a szarvasbogarat. Egy legördülő óriási hógolyóból váratlanul Bagolydoktor bukkan elő, aki lecsúszott a hegyoldalon; ő békíti ki a két veszekedőt azzal, hogy mindenki a saját kedve szerinti hóembert építsen. A barátok vidáman sok hóembert emelnek a dombon, majd segítenek összeszedni a bagoly elvesztett fenyőtobozait, este pedig ki-ki otthon, boldogan alszik el."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "vendel"
+  - "baltazar"
+  - "bagolydoktor"
+  - "gombi"
+  - "lili"
+  - "dome"
+  - "ugri"
+  - "pihe"
+  - "milla"
+  - "dorottya"
+  - "alfonz"
+  - "patrik"
+  - "barlangi-pok"
+  - "szello"
+  - "hangyakiralyno"
+  - "hangyagyerekek"
+  - "bagolymama"
+  - "bagolyfiokak"
+locations:
+  - "domb"
+  - "hegy"
+  - "fenyoerdo"
+  - "erdo"
+  - "patak"
+  - "tolgyfa"
+objects:
+  - "szanko"
+  - "holabda"
+  - "hoember"
+themes:
+  - "veszekedes-kibekules"
+  - "jatszas"
+  - "segites"
+  - "baratsag"
+  - "megbocsatas"
+  - "alkotas"
+  - "bocsanatkeres"
+seasons:
+  - "tel"
+holidays: []

@@ -1,4 +1,5 @@
 id: "kelemen"
 name: "Kelemen"
 kind: "animal"
-description: ""
+description: "Kanárimadár, aki Katát a hátán hozza."
+species: "Kanári madár"

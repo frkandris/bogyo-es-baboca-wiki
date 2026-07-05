@@ -1,0 +1,19 @@
+id: "finomsagai-01-bagolydoktor-es-a-sutemenyek"
+title: "Bagolydoktor és a sütemények"
+volume: "finomsagai"
+order: 1
+pageStart: 3
+pageEnd: 33
+summary: "Az erdő lakói sütőversenyt rendeznek, és a bölcs Bagolydoktort kérik fel zsűrinek. A doktor komolyan veszi a feladatot, ám kiderül, hogy néha még a legokosabbak is tévedhetnek. A kedves történet arról szól, hogy a hiba is az élet része, és mindenkinek másban rejlik a tehetsége."
+characters:
+  - "bagolydoktor"
+  - "bogyo"
+  - "baboca"
+locations:
+  - "erdo"
+objects: []
+themes:
+  - "sutes-fozes"
+  - "verseny"
+seasons: []
+holidays: []

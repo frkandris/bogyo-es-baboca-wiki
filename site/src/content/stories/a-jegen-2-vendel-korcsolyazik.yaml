@@ -1,0 +1,26 @@
+id: "a-jegen-2-vendel-korcsolyazik"
+title: "Vendel korcsolyázik"
+volume: "a-jegen"
+order: 2
+pageStart: 23
+pageEnd: 44
+summary: "Bogyó és Babóca a befagyott tavon csúszkálnak, és Vendelt is hívják, de a szarvasbogár folyton elesik, sőt egy tüskés bokorba is belecsúszik, és már-már feladja. Ekkor megjelenik Milla, a hóbogár, aki a korcsolyájával könnyedén siklik a jégen. Milla fából korcsolyát készít mindannyiuknak, végül pedig Vendel is örömmel megtanul korcsolyázni."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "vendel"
+  - "milla"
+locations:
+  - "to"
+  - "erdo"
+objects:
+  - "korcsolya"
+themes:
+  - "sport"
+  - "kitartas"
+  - "segites"
+  - "baratsag"
+  - "alkotas"
+seasons:
+  - "tel"
+holidays: []

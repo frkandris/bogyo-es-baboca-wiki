@@ -71,11 +71,13 @@ CHAR_DESC = {
 }
 # tárgy al-csoportok: csoportcímke -> az ide tartozó objektum-id-k (kulcsszó egyezés)
 OBJECT_GROUPS = {
-    "Hangszerek": {"hegedu", "gitar", "furulya", "zongora", "dob", "trombita", "harmonika", "cintanyer", "csengo", "sip"},
-    "Zöldségek és gyümölcsök": {"alma", "afonya", "szamoca", "cseresznye", "szolo", "korte", "eper", "makk", "mogyoro", "gesztenye", "csipkebogyo", "borso", "tok"},
-    "Ételek és sütemények": {"mezeskalacs", "lepeny", "afonyas-lepeny", "szamocas-lepeny", "suti", "torta", "palacsinta", "leves", "lekvar", "morzsa", "csipkebogyoszorp"},
-    "Ruházat": {"pulover", "sapka", "sal", "kesztyu", "cipo", "kabat", "jelmez"},
-    "Természet": {"virag", "level", "lapulevel", "fa", "ag", "kavics", "toboz", "harmat", "hoember", "hopehely"},
+    "Hangszerek": {"hegedu", "gitar", "furulya", "zongora", "dob", "trombita", "harmonika", "cintanyer", "csengo", "sip",
+                   "citera", "csello", "harfa", "kurt", "lant", "nagybogo", "orgona", "triangulum", "brácsa", "bracsa", "cimbalom",
+                   "csengettyu", "csorgo"},
+    "Zöldségek és gyümölcsök": {"alma", "afonya", "szamoca", "cseresznye", "szolo", "korte", "eper", "makk", "mogyoro", "gesztenye", "csipkebogyo", "borso", "tok", "repa", "gyumolcs"},
+    "Ételek és sütemények": {"mezeskalacs", "lepeny", "afonyas-lepeny", "szamocas-lepeny", "suti", "torta", "palacsinta", "leves", "lekvar", "morzsa", "csipkebogyoszorp", "kalacs", "csokitorta"},
+    "Ruházat": {"pulover", "sapka", "sal", "kesztyu", "cipo", "kabat", "jelmez", "csizma"},
+    "Természet": {"virag", "level", "lapulevel", "fa", "ag", "faag", "kavics", "toboz", "harmat", "hoember", "hopehely", "tulipan"},
 }
 
 def q(s): return json.dumps(str(s), ensure_ascii=False)

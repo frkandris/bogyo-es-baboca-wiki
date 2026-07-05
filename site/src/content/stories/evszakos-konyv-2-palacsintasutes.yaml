@@ -1,0 +1,32 @@
+id: "evszakos-konyv-2-palacsintasutes"
+title: "Palacsintasütés"
+volume: "evszakos-konyv"
+order: 2
+pageStart: 33
+pageEnd: 57
+summary: "Bogyó egyedül vág bele a palacsintasütésbe, de sorra elrontja: kimarad az olaj, a tészta a lámpán köt ki, a végén pedig csüggedten kijelenti, hogy soha többé nem süt. Babóca átjön hozzá, megvigasztalja, együtt rendet raknak és tömérdek palacsintát sütnek. Délután kiviszik a finomságokat a patakpartra, ahol a barátok fürödve, játszva, jóízűen falatozva ünneplik a nyarat."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "baltazar"
+  - "vendel"
+  - "dome"
+  - "gombi"
+  - "alfonz"
+  - "csiga-csaba"
+  - "barlangi-pok"
+locations:
+  - "bogyo-haza"
+  - "baboca-haza"
+  - "patak"
+objects:
+  - "serpenyo"
+themes:
+  - "sutes-fozes"
+  - "baratsag"
+  - "segites"
+  - "kitartas"
+  - "osztozkodas"
+seasons:
+  - "nyar"
+holidays: []

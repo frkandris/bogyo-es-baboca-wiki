@@ -1,0 +1,37 @@
+id: "enekel-1-csillaghajo"
+title: "Csillaghajó"
+volume: "enekel"
+order: 1
+pageStart: 7
+pageEnd: 30
+summary: "Karácsony napján Bogyó, Babóca és barátaik feldíszítik a Babóca háza előtti kis fenyőt, és karácsonyi dalokat énekelnek. Pihe titokban meghívja a régi ismerőst, a Csillaglányt, aki csillagházában száll alá az égből. A lányka csillagokból varázsol egy fényes csillaghajót, amellyel a kis barátok körberepülik a havas, alvó erdőt. Végül az utolsó csillag a fenyő csúcsára kerül, és mindannyian meghatottan éneklik tovább az ünnepi dalokat."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "baltazar"
+  - "pihe"
+  - "vendel"
+  - "gombi"
+  - "csillaglany"
+  - "sun-soma"
+  - "barlangi-pok"
+  - "bagolydoktor"
+  - "hangyagyerekek"
+locations:
+  - "erdo"
+  - "baboca-haza"
+  - "csillaghaz"
+objects:
+  - "karacsonyfa"
+  - "csillaghajo"
+  - "harfa"
+  - "kalacs"
+themes:
+  - "unnep"
+  - "zene"
+  - "baratsag"
+  - "alkotas"
+seasons:
+  - "tel"
+holidays:
+  - "karacsony"

@@ -1,4 +1,5 @@
 id: "harfa"
 name: "Hárfa"
 category: "object"
-description: ""
+description: "A Csillaglány hangszere, amelynek dallamára a csillagház a levegőbe emelkedik."
+group: "Hangszerek"

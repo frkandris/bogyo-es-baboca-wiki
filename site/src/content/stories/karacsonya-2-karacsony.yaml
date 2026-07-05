@@ -1,0 +1,41 @@
+id: "karacsonya-2-karacsony"
+title: "Karácsony"
+volume: "karacsonya"
+order: 2
+pageStart: 26
+pageEnd: 49
+summary: "Bogyó és Babóca fenyőágért indulnak az erdőbe, és egy vihar kidöntötte kis fa alatt egy megfázott, megsérült százlábúra bukkannak. Hazaviszik, meleg teával és mesével ápolják, majd amikor meggyógyul, marasztalják a karácsonyra. A barátok közösen készülnek az ünnepre: a hangyák új cipőcskéket varrnak a százlábúnak, a szentjánosbogarak pedig segítenek feldíszíteni a fát. Késő estig énekelnek, táncolnak és ajándékokat adnak egymásnak a karácsonyfa körül."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "szazlabu"
+  - "hangyakiralyno"
+  - "hangyagyerekek"
+  - "szentjanosbogarak"
+  - "dome"
+  - "vendel"
+  - "alfonz"
+  - "lili"
+  - "pihe"
+  - "szello"
+  - "ugri"
+  - "baltazar"
+locations:
+  - "erdo"
+  - "bogyo-haza"
+objects:
+  - "szanko"
+  - "karacsonyfa"
+  - "csillagszoro"
+  - "cipo"
+themes:
+  - "unnep"
+  - "segites"
+  - "gondoskodas"
+  - "baratsag"
+  - "betegseg"
+  - "alkotas"
+seasons:
+  - "tel"
+holidays:
+  - "karacsony"

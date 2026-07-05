@@ -1,0 +1,39 @@
+id: "sun-soma-szuletesnapja-1-sun-soma-szuletesnapja"
+title: "Sün Soma születésnapja"
+volume: "sun-soma-szuletesnapja"
+order: 1
+pageStart: 1
+pageEnd: 22
+summary: "Egy nyári napon a barátok rájönnek, hogy Sün Soma nemsokára tízéves lesz, ezért meglepetést készítenek neki. Ácsolnak egy nagy hajó alakú hintát, amely elbírja a sünit, és emeletes szülinapi tortát is sütnek. A tortát azonban felborítják a fogócskázó hangyagyerekek, ezért gyorsan hatalmas kupac gyümölcsöt gyűjtenek helyette, és abba tűzik a tíz gyertyát. Sün Soma boldogan ünnepel: kipróbálja az új hintát, mindenki jóllakik a gyümölcsből, este pedig a megmaradt almákat és körtéket a tüskéire tűzve tér haza."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "baltazar"
+  - "pihe"
+  - "gombi"
+  - "vendel"
+  - "dome"
+  - "szello"
+  - "lili"
+  - "sun-soma"
+  - "hangyagyerekek"
+locations:
+  - "ret"
+  - "baltazar-haza"
+  - "sun-soma-haza"
+objects:
+  - "hinta"
+  - "torta"
+  - "gyertya"
+  - "level"
+  - "gyumolcs"
+themes:
+  - "szuletesnap"
+  - "baratsag"
+  - "alkotas"
+  - "segites"
+  - "sutes-fozes"
+seasons:
+  - "nyar"
+holidays:
+  - "szuletesnap"

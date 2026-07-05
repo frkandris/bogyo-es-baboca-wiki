@@ -1,0 +1,30 @@
+id: "ovodaban-1-a-barlangi-pok"
+title: "A barlangi pók"
+volume: "ovodaban"
+order: 1
+pageStart: 3
+pageEnd: 25
+summary: "Bogyó, Babóca, Pihe és Baltazár színes faleveleket gyűjt az őszi erdőben, amikor sírásra lesznek figyelmesek: egy Gömbi nevű kis virágbogár eltévedt egy sötét barlangban. Miközben segítenek neki megkeresni a kijáratot, egy hatalmas, mérges pók riasztja meg őket, akit végül kötéllel megkötöznek. Kiderül, hogy a pók csak azért volt dühös, mert felébresztették, ezért bocsánatot kér, és a hátán viszi ki a társaságot a barlangból. A barátok gesztenyéből babakocsit építenek Gömbinek, és hazakísérik a kis házikójába."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "pihe"
+  - "baltazar"
+  - "gombi"
+  - "barlangi-pok"
+locations:
+  - "erdo"
+  - "barlang"
+  - "gombamezo"
+objects:
+  - "kotel"
+  - "babakocsi"
+themes:
+  - "baratsag"
+  - "segites"
+  - "felfedezes"
+  - "megbocsatas"
+  - "evszakok"
+seasons:
+  - "osz"
+holidays: []

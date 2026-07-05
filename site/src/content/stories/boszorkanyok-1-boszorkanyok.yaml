@@ -1,0 +1,25 @@
+id: "boszorkanyok-1-boszorkanyok"
+title: "Boszorkányok"
+volume: "boszorkanyok"
+order: 1
+pageStart: 1
+pageEnd: 25
+summary: "Egy nyári napon Bogyó és Babóca a barátaikkal a boszorkányokról beszélgetnek, és este visszatérnek a rétre, hátha látnak egyet. A sötétben ijesztő boszorkányok röppennek fel, akikről kiderül, hogy Pihe és Baltazár tréfálták meg őket. Bosszúból Bogyó és Babóca ördögjelmezbe bújva ijesztenek rá a barátaikra, ám ebből heves veszekedés lesz. Végül Babóca békíti ki a társaságot, együtt próbálják fel egymás jelmezeit, és seprűnyélen 'boszorkányként' repülnek."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "pihe"
+  - "baltazar"
+locations:
+  - "ret"
+  - "baboca-haza"
+objects:
+  - "sepru"
+themes:
+  - "baratsag"
+  - "jatszas"
+  - "jelmez"
+  - "veszekedes-kibekules"
+seasons:
+  - "nyar"
+holidays: []

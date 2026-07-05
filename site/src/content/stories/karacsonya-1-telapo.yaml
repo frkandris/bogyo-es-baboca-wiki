@@ -1,0 +1,31 @@
+id: "karacsonya-1-telapo"
+title: "Télapó"
+volume: "karacsonya"
+order: 1
+pageStart: 4
+pageEnd: 24
+summary: "Babóca izgatottan meséli Bogyónak, hogy éjjel jön a Télapó, ezért a csigafiú gondosan kifényesíti a csizmáját, és kiteszi az ablakba. Reggel az ő kis csizmája üresen marad, ezért elkeseredve világgá indul, és az erdőben egy fenyő alatt sírdogál. Barátai Babócával az élen megkeresik, és éppen ekkor tűnik fel az égen a Télapó rénszarvasszánja. Kiderül, hogy Bogyó ajándéka – egy színes szélcsengő – végig a másik ablakban várta, így a csigafiú megvigasztalódva, a csengő hangjára alszik el."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "telapo"
+  - "vendel"
+  - "baltazar"
+  - "pihe"
+  - "kukac"
+locations:
+  - "bogyo-haza"
+  - "erdo"
+objects:
+  - "csizma"
+  - "szinesceruza"
+  - "szelcsengo"
+  - "szanko"
+themes:
+  - "unnep"
+  - "baratsag"
+  - "gondoskodas"
+seasons:
+  - "tel"
+holidays:
+  - "mikulas"

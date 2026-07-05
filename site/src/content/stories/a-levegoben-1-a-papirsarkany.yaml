@@ -1,0 +1,31 @@
+id: "a-levegoben-1-a-papirsarkany"
+title: "A papírsárkány"
+volume: "a-levegoben"
+order: 1
+pageStart: 2
+pageEnd: 25
+summary: "Bogyó és Babóca papírsárkányt készítenek, majd elindulnak megröptetni. A sárkány sokáig nem száll fel, ám amikor hirtelen feltámad a szél, magával ragadja Babócát, és sorra a segítségére siető barátait is: Baltazárt, Dömét, Ugrit és Pihét. A csapat végül a fák tetején köt ki, ahonnan Vendel és Szellő egy kifeszített ponyva segítségével juttatja le a repülni nem tudó Bogyót. Estig önfeledten ugrálnak a ponyván, éjjel pedig a szél végleg elviszi a papírsárkányt."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "baltazar"
+  - "dome"
+  - "ugri"
+  - "pihe"
+  - "vendel"
+  - "szello"
+locations:
+  - "bogyo-haza"
+  - "ret"
+  - "erdo"
+objects:
+  - "papirsarkany"
+  - "ponyva"
+themes:
+  - "alkotas"
+  - "jatszas"
+  - "baratsag"
+  - "segites"
+seasons:
+  - "tavasz"
+holidays: []
