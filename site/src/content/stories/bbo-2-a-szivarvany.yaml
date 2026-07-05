@@ -1,0 +1,38 @@
+id: "bbo-2-a-szivarvany"
+title: "A szivárvány"
+volume: "bogyo-es-baboca"
+order: 2
+pageStart: 23
+pageEnd: 46
+summary: "A nyári zápor után szivárvány jelenik meg, Bogyó hiába próbál felmászni rá, ezért Babóca és barátai a születésnapjára egy szivárványcsúszdát építenek neki."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "baltazar"
+  - "pihe"
+  - "ugri"
+  - "dome"
+  - "szello"
+  - "vendel"
+locations:
+  - "ret"
+  - "bogyo-haza"
+  - "baboca-haza"
+objects:
+  - "szivarvany"
+  - "szivarvany-csuszda"
+  - "lufi"
+  - "letra"
+  - "csokitorta"
+  - "virag"
+themes:
+  - "kitartas"
+  - "baratsag"
+  - "jatszas"
+  - "unnep"
+  - "szuletesnap"
+  - "termeszet"
+seasons:
+  - "nyar"
+holidays:
+  - "szuletesnap"

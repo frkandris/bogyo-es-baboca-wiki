@@ -1,0 +1,30 @@
+id: "bbo-1-a-baratsag"
+title: "A barátság"
+volume: "bogyo-es-baboca"
+order: 1
+pageStart: 2
+pageEnd: 22
+summary: "Babóca talál egy hatalmas cseresznyét, Bogyó segít neki elvinni, összevesznek az osztozkodáson, de a benne lakó kukac elvezeti őket a cseresznyefához, és jó barátok lesznek."
+characters:
+  - "baboca"
+  - "bogyo"
+  - "kukac"
+locations:
+  - "baboca-haza"
+  - "ret"
+  - "cseresznyefa"
+  - "bogyo-haza"
+objects:
+  - "cseresznye"
+  - "talicska"
+  - "virag"
+  - "level"
+themes:
+  - "baratsag"
+  - "segites"
+  - "veszekedes-kibekules"
+  - "osztozkodas"
+  - "termeszet"
+seasons:
+  - "nyar"
+holidays: []
