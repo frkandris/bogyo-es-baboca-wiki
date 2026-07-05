@@ -26,7 +26,28 @@ CATEGORY_OVERRIDES = {"babakocsi": "vehicle"}
 
 # theme slug aliases -> canonical slug (merges synonym themes)
 THEME_ALIASES = {}
-CANONICAL_THEME_LABELS = {}
+# kanonikus, ékezetes címkék — az ügynökök gyakran ékezet nélküli slugból
+# generálják a label-t, ezért a helyes magyar címke itt mindig felülírja.
+CANONICAL_THEME_LABELS = {
+    "alkotas": "Alkotás", "baratsag": "Barátság", "betegseg": "Betegség",
+    "bocsanatkeres": "Bocsánatkérés", "csalad": "Család", "evszakok": "Évszakok",
+    "farsang": "Farsang", "felfedezes": "Felfedezés", "gondoskodas": "Gondoskodás",
+    "hangszerek": "Hangszerek", "jatszas": "Játszás", "jelmez": "Jelmez",
+    "kirandulas": "Kirándulás", "kitartas": "Kitartás", "megbocsatas": "Megbocsátás",
+    "mozgas": "Mozgás", "orvos": "Orvos", "osztozkodas": "Osztozkodás",
+    "rajzolas": "Rajzolás", "rokonok": "Rokonok", "segites": "Segítés",
+    "sport": "Sport", "sutes-fozes": "Sütés-főzés", "szuletesnap": "Születésnap",
+    "termeszet": "Természet", "unnep": "Ünnep", "utazas": "Utazás",
+    "verseny": "Verseny", "veszekedes": "Veszekedés",
+    "veszekedes-kibekules": "Veszekedés és kibékülés", "zene": "Zene",
+}
+CANONICAL_SEASON_LABELS = {
+    "tavasz": "Tavasz", "nyar": "Nyár", "osz": "Ősz", "tel": "Tél",
+}
+CANONICAL_HOLIDAY_LABELS = {
+    "farsang": "Farsang", "szuletesnap": "Születésnap", "husvet": "Húsvét",
+    "karacsony": "Karácsony", "mikulas": "Mikulás", "anyak-napja": "Anyák napja",
+}
 # szereplő-alias: ugyanaz a szereplő több slug alatt -> kanonikus id
 CHARACTER_ALIASES = {
     "zold-kukac": "kukac",
@@ -182,10 +203,16 @@ def main():
     # apply theme aliases to story references (dedup, preserve order)
     for s in stories:
         s["themes"] = list(dict.fromkeys(THEME_ALIASES.get(t, t) for t in s.get("themes", [])))
-    # canonical labels win even if a canonical theme already existed with a weaker label
+    # canonical labels win even if a canonical entry already existed with a weaker (ékezet nélküli) label
     for slug, label in CANONICAL_THEME_LABELS.items():
         if slug in themes:
             themes[slug] = label
+    for slug, label in CANONICAL_SEASON_LABELS.items():
+        if slug in seasons:
+            seasons[slug] = label
+    for slug, label in CANONICAL_HOLIDAY_LABELS.items():
+        if slug in holidays:
+            holidays[slug] = label
 
     stories.sort(key=lambda s: (s.get("volume", ""), s.get("order", 0)))
 
