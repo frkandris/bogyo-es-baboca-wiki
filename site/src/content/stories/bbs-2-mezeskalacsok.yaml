@@ -1,0 +1,35 @@
+id: "bbs-2-mezeskalacsok"
+title: "Mézeskalácsok"
+volume: "sutemenyei"
+order: 2
+pageStart: 28
+pageEnd: 49
+summary: "Télen Bogyó és Babóca mézeskalácsot sütnek, de egy szarka ellopja; a nyomokat követve megtalálják, a szarka visszaadja és bocsánatot kér, végül együtt uzsonnáznak a barátokkal."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "szarka"
+  - "milla"
+  - "kukac"
+  - "gombi"
+  - "dome"
+  - "pihe"
+  - "baltazar"
+  - "vendel"
+locations:
+  - "baboca-haza"
+  - "erdo"
+objects:
+  - "mezeskalacs"
+  - "csipkebogyoszorp"
+  - "hoember"
+  - "morzsa"
+themes:
+  - "sutes-fozes"
+  - "baratsag"
+  - "veszekedes-kibekules"
+  - "megbocsatas"
+  - "segites"
+seasons:
+  - "tel"
+holidays: []

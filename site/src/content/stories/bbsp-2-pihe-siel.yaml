@@ -1,0 +1,31 @@
+id: "bbsp-2-pihe-siel"
+title: "Pihe síel"
+volume: "sportol"
+order: 2
+pageStart: 31
+pageEnd: 52
+summary: "Milla the snowbug invites everyone skiing and builds skis for those lacking them, but shy Pihe hides that she cannot ski, crashes badly, and is rescued then taught."
+characters:
+  - "milla"
+  - "bogyo"
+  - "ugri"
+  - "pihe"
+  - "baboca"
+  - "baltazar"
+  - "vendel"
+  - "zold-kukac"
+  - "bagolydoktor"
+locations:
+  - "hegy"
+objects:
+  - "silec"
+  - "sisak"
+  - "sibot"
+themes:
+  - "sport"
+  - "mozgas"
+  - "baratsag"
+  - "segites"
+seasons:
+  - "tel"
+holidays: []

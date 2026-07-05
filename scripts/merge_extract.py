@@ -91,22 +91,47 @@ def main():
     stories, chars, locs, objs = [], {}, {}, {}
     themes, seasons, holidays = {}, {}, {}
 
+    def norm(e, field, default, allowed):
+        # robust to agents using "slug" instead of "id", stray keys, invalid enum values
+        eid = e.get("id") or e.get("slug")
+        val = e.get(field, default)
+        if val not in allowed:
+            val = default
+        out = {"id": eid, "name": e.get("name", eid or ""), field: val,
+               "description": e.get("description", "")}
+        return eid, out
+
+    KIND = {"person", "animal", "toy", "other"}
+    LKIND = {"real", "fictional"}
+    CAT = {"object", "vehicle"}
     for b in batches:
         stories.extend(b["stories"])
         for c in b["entities"].get("characters", []):
-            chars[c["id"]] = better(chars.get(c["id"]), c)
+            cid, c = norm(c, "kind", "animal", KIND)
+            if cid: chars[cid] = better(chars.get(cid), c)
         for l in b["entities"].get("locations", []):
-            locs[l["id"]] = better(locs.get(l["id"]), l)
+            lid, l = norm(l, "kind", "real", LKIND)
+            if lid: locs[lid] = better(locs.get(lid), l)
         for o in b["entities"].get("objects", []):
-            objs[o["id"]] = better(objs.get(o["id"]), o)
+            oid, o = norm(o, "category", "object", CAT)
+            if oid: objs[oid] = better(objs.get(oid), o)
+        def vocab(item):
+            # robust to string form ("slug") or object form ({slug/id, label})
+            if isinstance(item, str):
+                return item, item.replace("-", " ").capitalize()
+            s = item.get("slug") or item.get("id")
+            return s, item.get("label") or (s.replace("-", " ").capitalize() if s else s)
         for t in b["taxonomy"].get("themes", []):
-            slug = THEME_ALIASES.get(t["slug"], t["slug"])
-            label = CANONICAL_THEME_LABELS.get(slug, t["label"])
-            themes.setdefault(slug, label)
-        for s in b["taxonomy"].get("seasons", []):
-            seasons.setdefault(s["slug"], s["label"])
-        for h in b["taxonomy"].get("holidays", []):
-            holidays.setdefault(h["slug"], h["label"])
+            s, lbl = vocab(t)
+            if not s: continue
+            s = THEME_ALIASES.get(s, s)
+            themes.setdefault(s, CANONICAL_THEME_LABELS.get(s, lbl))
+        for it in b["taxonomy"].get("seasons", []):
+            s, lbl = vocab(it)
+            if s: seasons.setdefault(s, lbl)
+        for it in b["taxonomy"].get("holidays", []):
+            s, lbl = vocab(it)
+            if s: holidays.setdefault(s, lbl)
 
     # category overrides
     for oid, cat in CATEGORY_OVERRIDES.items():

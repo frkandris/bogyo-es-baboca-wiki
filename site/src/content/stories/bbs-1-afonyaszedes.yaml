@@ -1,0 +1,34 @@
+id: "bbs-1-afonyaszedes"
+title: "Áfonyaszedés"
+volume: "sutemenyei"
+order: 1
+pageStart: 4
+pageEnd: 27
+summary: "Bogyó, Babóca és barátaik áfonyát szednek az erdőben, de a mohó Döme mindent elkap; amikor Pihe a patakba esik, összefognak, kimentik, és később közösen sütnek lepényt."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "pihe"
+  - "dome"
+  - "vendel"
+  - "baltazar"
+  - "gombi"
+locations:
+  - "erdo"
+  - "patak"
+  - "pihe-haza"
+objects:
+  - "afonya"
+  - "hid"
+  - "pulover"
+  - "lapulevel"
+  - "afonyas-lepeny"
+themes:
+  - "baratsag"
+  - "segites"
+  - "veszekedes-kibekules"
+  - "sutes-fozes"
+  - "termeszet"
+seasons:
+  - "osz"
+holidays: []

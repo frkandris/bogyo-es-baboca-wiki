@@ -59,3 +59,13 @@ export function slugify(s: string): string {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
+
+// Kiadványtípus címkék (egy kötet több típusú is lehet)
+export const TYPE_LABEL: Record<string, string> = {
+  mese: 'Mese',
+  kifesto: 'Kifestő',
+  receptes: 'Receptes',
+  dal: 'Daloskönyv',
+  foglalkoztato: 'Foglalkoztató',
+  egyeb: 'Egyéb',
+};

@@ -1,0 +1,37 @@
+id: "bbr-2-kavicsok"
+title: "Kavicsok"
+volume: "rajzol"
+order: 2
+pageStart: 31
+pageEnd: 52
+summary: "Babóca szamócáért küldi Vendelt és Baltazárt, ám azok egy kavicson összevesznek és a patakba gurulnak, ahol Alfonz kavicsgyűjteménye a barátokat festett kövek díszítésére ihleti."
+characters:
+  - "baboca"
+  - "vendel"
+  - "baltazar"
+  - "alfonz"
+  - "bogyo"
+  - "pihe"
+  - "szello"
+  - "ugri"
+  - "dome"
+  - "gombi"
+locations:
+  - "patak"
+  - "ret"
+  - "erdo"
+  - "haziko"
+objects:
+  - "kavics"
+  - "szamoca"
+  - "lepeny"
+themes:
+  - "baratsag"
+  - "segites"
+  - "veszekedes"
+  - "alkotas"
+  - "rajzolas"
+  - "termeszet"
+seasons:
+  - "nyar"
+holidays: []

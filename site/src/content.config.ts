@@ -66,6 +66,8 @@ const volumes = defineCollection({
     year: z.number().optional(),
     description: z.string().optional(),
     coverNote: z.string().optional(),
+    // kiadványtípus(ok) — egy könyv több is lehet (pl. mese + receptes). Tartalom alapján, nem cím alapján.
+    types: z.array(z.enum(['mese', 'kifesto', 'receptes', 'dal', 'foglalkoztato', 'egyeb'])).default(['mese']),
   }),
 });
 

@@ -1,0 +1,44 @@
+id: "bbsp-1-focimeccs"
+title: "Focimeccs"
+volume: "sportol"
+order: 1
+pageStart: 7
+pageEnd: 29
+summary: "Vendel's old friend Frici visits with a new football, the animals split into two teams, but Frici's rough, rule-breaking play injures Bogyó and breaks his own hand."
+characters:
+  - "vendel"
+  - "frici"
+  - "bogyo"
+  - "baltazar"
+  - "gombi"
+  - "dome"
+  - "csiga-csaba"
+  - "ugri"
+  - "alfonz"
+  - "baboca"
+  - "pihe"
+  - "lili"
+  - "szello"
+  - "milla"
+  - "dorottya"
+  - "patrik"
+  - "egon"
+  - "bagolydoktor"
+locations:
+  - "ret"
+  - "erdo"
+  - "palya"
+objects:
+  - "focilabda"
+  - "mez"
+  - "gipsz"
+  - "sip"
+themes:
+  - "sport"
+  - "mozgas"
+  - "baratsag"
+  - "jatszas"
+  - "segites"
+seasons:
+  - "nyar"
+holidays: []

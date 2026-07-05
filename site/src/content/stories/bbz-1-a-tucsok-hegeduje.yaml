@@ -1,0 +1,50 @@
+id: "bbz-1-a-tucsok-hegeduje"
+title: "A tücsök hegedűje"
+volume: "zenel"
+order: 1
+pageStart: 2
+pageEnd: 23
+summary: "When ant children accidentally break cricket Alfonz's beloved violin during a ballgame, his friends band together to craft new instruments and form an orchestra to console him."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "alfonz"
+  - "pihe"
+  - "patrik"
+  - "baltazar"
+  - "vendel"
+  - "dome"
+  - "egon"
+  - "gombi"
+  - "szello"
+  - "ugri"
+  - "barlangi-pok"
+  - "hangyagyerekek"
+locations:
+  - "erdo"
+  - "gombamezo"
+  - "patrik-kek-hazikoja"
+objects:
+  - "hegedu"
+  - "harfa"
+  - "nagybogo"
+  - "csello"
+  - "trombita"
+  - "kurt"
+  - "dob"
+  - "cintanyer"
+  - "lant"
+  - "citera"
+  - "triangulum"
+  - "furulya"
+  - "labda"
+themes:
+  - "baratsag"
+  - "segites"
+  - "zene"
+  - "hangszerek"
+  - "jatszas"
+  - "termeszet"
+seasons:
+  - "osz"
+holidays: []

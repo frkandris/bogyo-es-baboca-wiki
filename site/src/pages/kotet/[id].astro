@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import StoryCard from '../../components/StoryCard.astro';
-import { href, SEG } from '../../lib/site';
+import { href, SEG, TYPE_LABEL } from '../../lib/site';
 import { allStories } from '../../lib/queries';
 
 export async function getStaticPaths() {
@@ -21,12 +21,17 @@ const stories = (await allStories()).filter((s) => s.data.volume.id === volume.i
 
   <h1>{d.title}</h1>
   <p class="muted">
-    {d.series} sorozat{d.publisher ? ` · ${d.publisher}` : ''}{d.year ? ` · ${d.year}` : ''} ·
-    {stories.length} mese
+    {d.series} sorozat{d.publisher ? ` · ${d.publisher}` : ''}{d.year ? ` · ${d.year}` : ''}
+    {stories.length > 0 ? ` · ${stories.length} mese` : ''}
   </p>
+  {d.types && d.types.length > 0 && (
+    <div class="chips" style="margin:6px 0 2px">
+      {d.types.map((t) => <span class={`chip ${t === 'mese' ? 'theme' : 'object'}`}>{TYPE_LABEL[t] ?? t}</span>)}
+    </div>
+  )}
   {d.description && <p style="max-width:62ch">{d.description}</p>}
 
-  <div class="section-title"><h2>Mesék</h2><span class="count">{stories.length} db</span></div>
+  {stories.length > 0 && <div class="section-title"><h2>Mesék</h2><span class="count">{stories.length} db</span></div>}
   <div class="grid">
     {stories.map((s) => (
       <StoryCard story={s} volumeName={`${s.data.order}. mese`} />

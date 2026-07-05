@@ -1,0 +1,31 @@
+id: "bbz-2-a-hoember"
+title: "A hóember"
+volume: "zenel"
+order: 2
+pageStart: 24
+pageEnd: 45
+summary: "While sledding, Bogyó and Babóca accidentally destroy Baltazár's snowman, then confess their mistake and help him build an even nicer one, sledding together into the evening."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "baltazar"
+locations:
+  - "erdo"
+  - "domb"
+objects:
+  - "hoember"
+  - "szanko"
+  - "holabda"
+  - "repa"
+  - "sal"
+  - "kalap"
+  - "faag"
+themes:
+  - "baratsag"
+  - "segites"
+  - "jatszas"
+  - "bocsanatkeres"
+  - "evszakok"
+seasons:
+  - "tel"
+holidays: []

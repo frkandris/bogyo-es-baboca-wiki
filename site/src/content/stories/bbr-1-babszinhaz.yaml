@@ -1,0 +1,32 @@
+id: "bbr-1-babszinhaz"
+title: "Bábszínház"
+volume: "rajzol"
+order: 1
+pageStart: 7
+pageEnd: 28
+summary: "Bogyó és Babóca a réti bábszínházba indulnak, de barátjuk, Döme bárányhimlős lesz, ezért az előadás után papírbábokat rajzolnak, hogy neki is eljátsszák a mesét otthon."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "pihe"
+  - "dome"
+  - "bagolydoktor"
+  - "szello"
+  - "vendel"
+  - "gombi"
+  - "lili"
+locations:
+  - "ret"
+  - "haziko"
+objects:
+  - "bab"
+  - "ceruza"
+themes:
+  - "baratsag"
+  - "segites"
+  - "rajzolas"
+  - "alkotas"
+  - "betegseg"
+seasons:
+  - "nyar"
+holidays: []
