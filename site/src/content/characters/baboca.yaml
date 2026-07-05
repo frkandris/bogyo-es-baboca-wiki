@@ -1,4 +1,5 @@
 id: "baboca"
 name: "Babóca"
 kind: "animal"
-description: "Kedves katicalány, Bogyó legjobb barátja."
+description: "Bogyó legjobb barátja, a mesék egyik főszereplője."
+species: "Katicalány"

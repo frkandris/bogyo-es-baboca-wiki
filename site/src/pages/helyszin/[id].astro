@@ -20,7 +20,7 @@ const volumes = await labelMap('volumes');
 <Base title={d.name} description={d.description}>
   <div class="crumbs"><a href={href('/')}>Főoldal</a> › <a href={href(`/${SEG.location}`)}>{LABEL.locations}</a> › {d.name}</div>
   <h1>{d.name}</h1>
-  <p class="muted">{d.kind === 'fictional' ? 'Kitalált helyszín' : 'Valós helyszín'} · {refs.length} mesében</p>
+  <p class="muted">Helyszín · {refs.length} mesében</p>
   {d.description && <p style="max-width:60ch">{d.description}</p>}
 
   <div class="section-title"><h2>Itt játszódó mesék</h2><span class="count">{refs.length} db</span></div>

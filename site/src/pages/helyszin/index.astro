@@ -12,13 +12,13 @@ locs.sort((a, b) => (counts.get(b.id) ?? 0) - (counts.get(a.id) ?? 0) || a.data.
 <Base title={LABEL.locations}>
   <div class="crumbs"><a href={href('/')}>Főoldal</a> › {LABEL.locations}</div>
   <h1>{LABEL.locations}</h1>
-  <p class="lead muted">Hol játszódnak a mesék? Valós budapesti és magyarországi helyszínek, valamint otthoni terek.</p>
+  <p class="lead muted">Hol játszódnak a mesék? A rét, a Nagy Tölgyfa és a Bogyó és Babóca-mesevilág helyszínei.</p>
 
   <div class="grid" style="margin-top:18px">
     {locs.map((c) => (
       <a class="card" href={href(`/${SEG.location}/${c.id}`)}>
         <h3>{c.data.name}</h3>
-        <div class="meta">{c.data.kind === 'fictional' ? 'Kitalált' : 'Valós'} · {counts.get(c.id) ?? 0} mesében</div>
+        <div class="meta">{counts.get(c.id) ?? 0} mesében</div>
         {c.data.description && <p class="small muted" style="margin:.4em 0 0">{c.data.description}</p>}
       </a>
     ))}

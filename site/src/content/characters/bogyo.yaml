@@ -1,4 +1,5 @@
 id: "bogyo"
 name: "Bogyó"
 kind: "animal"
-description: "Kedves csigafiú, Babóca legjobb barátja."
+description: "Babóca legjobb barátja, a mesék egyik főszereplője."
+species: "Csigafiú"

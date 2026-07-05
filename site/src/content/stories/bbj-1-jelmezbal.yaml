@@ -1,0 +1,38 @@
+id: "bbj-1-jelmezbal"
+title: "Jelmezbál"
+volume: "jelmezbalban"
+order: 1
+pageStart: 2
+pageEnd: 22
+summary: "A kis bogarak titokban jelmezeket készítenek a farsangi bálra, és amikor Szellő elveszíti királylány-ruháját, közösen varrnak neki egy világító napocska-jelmezt, amely a legkülönlegesebb lesz."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "pihe"
+  - "baltazar"
+  - "dorottya"
+  - "gombi"
+  - "vendel"
+  - "lili"
+  - "ugri"
+  - "dome"
+  - "szello"
+  - "csiga-csaba"
+  - "bagolydoktor"
+locations:
+  - "baboca-haza"
+  - "vendel-haza"
+  - "erdo"
+objects:
+  - "jelmez"
+  - "lampas"
+themes:
+  - "farsang"
+  - "jelmez"
+  - "unnep"
+  - "baratsag"
+  - "segites"
+seasons:
+  - "tel"
+holidays:
+  - "farsang"

@@ -1,0 +1,37 @@
+id: "bbv-1-tengeri-kaland"
+title: "Tengeri kaland"
+volume: "vilagot-lat"
+order: 1
+pageStart: 2
+pageEnd: 23
+summary: "Bogyó és Babóca hajót építenek, és a mese a tengeri kalandozásról és felfedezésről szól, ahol a víz alatt új barátokra találnak."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "bagolydoktor"
+  - "baltazar"
+  - "rak"
+  - "polip"
+  - "teknos"
+locations:
+  - "ret"
+  - "patak"
+  - "folyo"
+  - "tenger"
+  - "sziget"
+objects:
+  - "mesekonyv"
+  - "hajo"
+  - "oxigenpalack"
+  - "kagylo"
+  - "kavics"
+themes:
+  - "utazas"
+  - "kirandulas"
+  - "felfedezes"
+  - "baratsag"
+  - "segites"
+  - "termeszet"
+seasons:
+  - "nyar"
+holidays: []

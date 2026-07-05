@@ -1,0 +1,26 @@
+id: "bbse-1-a-kanarifiokak"
+title: "A kanárifiókák"
+volume: "segit"
+order: 1
+pageStart: 2
+pageEnd: 23
+summary: "Kelemen és Lenke kanárifiókái kikelnek, és a mese a segítségről szól, ahogy Bogyó és Babóca az éjszakában megtalálják az elkószált kicsit."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "kelemen"
+  - "lenke"
+  - "szentjanosbogarak"
+locations:
+  - "tolgyfa"
+  - "erdo"
+  - "ret"
+objects: []
+themes:
+  - "segites"
+  - "gondoskodas"
+  - "baratsag"
+  - "termeszet"
+seasons:
+  - "tavasz"
+holidays: []

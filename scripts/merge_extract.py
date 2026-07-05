@@ -25,29 +25,36 @@ GENERATED = ["stories", "characters", "locations", "objects", "themes", "seasons
 CATEGORY_OVERRIDES = {"babakocsi": "vehicle"}
 
 # theme slug aliases -> canonical slug (merges synonym themes)
-THEME_ALIASES = {
-    "iskolakezdes": "iskola-kezdes",
-    "ovoda-kezdes": "ovoda",
-    "onallosodas": "onallosag",
-    "harag": "duh",
-    "testvervita": "testverfeltekenyseg",
-}
-# canonical labels for the merge targets (so an alias's label can't pollute them)
-CANONICAL_THEME_LABELS = {
-    "iskola-kezdes": "Iskolakezdés",
-    "ovoda": "Óvoda",
-    "onallosag": "Önállóság",
-    "duh": "Düh",
-    "testverfeltekenyseg": "Testvérféltékenység",
+THEME_ALIASES = {}
+CANONICAL_THEME_LABELS = {}
+# szereplő-alias: ugyanaz a szereplő több slug alatt -> kanonikus id
+CHARACTER_ALIASES = {
+    "zold-kukac": "kukac",
 }
 
-# id -> forced fields (applied after dedup). Keeps entities canonical across volumes.
-ENTITY_OVERRIDES = {
-    # The family's own red car — a distinct entity from the toy car (kisauto).
-    "auto": {"name": "Piros autó", "category": "vehicle",
-             "description": "A család saját piros autója, amivel kirándulni és nyaralni járnak."},
-    "kisauto": {"name": "Kisautó (játék)", "category": "vehicle",
-                "description": "Játékautó a gyerekek játékai között."},
+ENTITY_OVERRIDES = {}  # (nem használt a Bogyó-wikin)
+
+# szereplő faj/szerep (a név alatt jelenik meg) — kanonikus a visszatérő szereplőkhöz
+SPECIES = {
+    "bogyo": "Csigafiú", "baboca": "Katicalány", "baltazar": "Méhecske",
+    "pihe": "Lepkekislány", "dome": "Krumplibogár", "szello": "Szitakötő",
+    "ugri": "Szöcske", "vendel": "Szarvasbogár", "gombi": "Virágbogár",
+    "alfonz": "Tücsök", "bagolydoktor": "Bagolydoktor", "sun-soma": "Sündisznó",
+    "szarka": "Szarka", "milla": "Hóbogár", "kukac": "Kukac", "zold-kukac": "Kukac",
+    "barlangi-pok": "Pók", "csiga-csaba": "Csigafiú", "hangyagyerekek": "Hangyák",
+}
+# a két főszereplő egységes leírása (species külön jelenik meg)
+CHAR_DESC = {
+    "bogyo": "Babóca legjobb barátja, a mesék egyik főszereplője.",
+    "baboca": "Bogyó legjobb barátja, a mesék egyik főszereplője.",
+}
+# tárgy al-csoportok: csoportcímke -> az ide tartozó objektum-id-k (kulcsszó egyezés)
+OBJECT_GROUPS = {
+    "Hangszerek": {"hegedu", "gitar", "furulya", "zongora", "dob", "trombita", "harmonika", "cintanyer", "csengo", "sip"},
+    "Zöldségek és gyümölcsök": {"alma", "afonya", "szamoca", "cseresznye", "szolo", "korte", "eper", "makk", "mogyoro", "gesztenye", "csipkebogyo", "borso", "tok"},
+    "Ételek és sütemények": {"mezeskalacs", "lepeny", "afonyas-lepeny", "szamocas-lepeny", "suti", "torta", "palacsinta", "leves", "lekvar", "morzsa", "csipkebogyoszorp"},
+    "Ruházat": {"pulover", "sapka", "sal", "kesztyu", "cipo", "kabat", "jelmez"},
+    "Természet": {"virag", "level", "lapulevel", "fa", "ag", "kavics", "toboz", "harmat", "hoember", "hopehely"},
 }
 
 def q(s): return json.dumps(str(s), ensure_ascii=False)
@@ -107,8 +114,17 @@ def main():
     for b in batches:
         stories.extend(b["stories"])
         for c in b["entities"].get("characters", []):
+            raw = c
             cid, c = norm(c, "kind", "animal", KIND)
-            if cid: chars[cid] = better(chars.get(cid), c)
+            sp = (raw.get("species") or raw.get("note") or "").strip()
+            if sp: c["species"] = sp[:1].upper() + sp[1:]
+            if cid:
+                merged = better(chars.get(cid), c)
+                # keep a species value from either side
+                if not merged.get("species"):
+                    for src in (c, chars.get(cid) or {}):
+                        if src.get("species"): merged["species"] = src["species"]; break
+                chars[cid] = merged
         for l in b["entities"].get("locations", []):
             lid, l = norm(l, "kind", "real", LKIND)
             if lid: locs[lid] = better(locs.get(lid), l)
@@ -142,6 +158,26 @@ def main():
         for eid, fields in ENTITY_OVERRIDES.items():
             if eid in tbl:
                 tbl[eid] = {**tbl[eid], **fields}
+
+    # character aliases: remap story refs, fold entity, drop the alias
+    for a, canon in CHARACTER_ALIASES.items():
+        if a in chars:
+            if canon not in chars:
+                chars[canon] = {**chars[a], "id": canon}
+            del chars[a]
+    for s in stories:
+        s["characters"] = list(dict.fromkeys(CHARACTER_ALIASES.get(c, c) for c in s.get("characters", [])))
+
+    # canonical species (a név alatt) + a két főszereplő egységes leírása
+    for cid, sp in SPECIES.items():
+        if cid in chars: chars[cid]["species"] = sp
+    for cid, desc in CHAR_DESC.items():
+        if cid in chars: chars[cid]["description"] = desc
+
+    # tárgy al-csoportok (kulcsszó alapján)
+    for grp, ids in OBJECT_GROUPS.items():
+        for oid in ids:
+            if oid in objs: objs[oid]["group"] = grp
 
     # apply theme aliases to story references (dedup, preserve order)
     for s in stories:

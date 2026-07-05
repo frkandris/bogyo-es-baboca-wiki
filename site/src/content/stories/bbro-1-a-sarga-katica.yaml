@@ -1,0 +1,32 @@
+id: "bbro-1-a-sarga-katica"
+title: "A sárga katica"
+volume: "rokonai"
+order: 1
+pageStart: 2
+pageEnd: 23
+summary: "Miután Babóca és barátai meggyógyítják a törött szárnyú Kelemen kanárit, a madár elrepíti Bogyót és Babócát egy távoli szigetre, ahol Babóca megismerkedik sárga katica rokonával, Katával."
+characters:
+  - "baboca"
+  - "bogyo"
+  - "kelemen"
+  - "vendel"
+  - "bagolydoktor"
+  - "baltazar"
+  - "pihe"
+  - "kata"
+locations:
+  - "ret"
+  - "sziget"
+  - "patak"
+  - "fenyoerdo"
+objects:
+  - "hordagy"
+themes:
+  - "rokonok"
+  - "csalad"
+  - "baratsag"
+  - "segites"
+  - "jatszas"
+seasons:
+  - "tavasz"
+holidays: []

@@ -1,0 +1,34 @@
+id: "bbse-2-leggomb"
+title: "Léggömb"
+volume: "segit"
+order: 2
+pageStart: 24
+pageEnd: 45
+summary: "A sérült Nellit vihar sodorja a rétre, és a mese az összefogásról szól, ahogy a barátok léggömböt készítenek, hogy hazasegítsék."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "ugri"
+  - "nelli"
+  - "baltazar"
+  - "pihe"
+  - "vendel"
+  - "szello"
+  - "alfonz"
+  - "sun-soma"
+  - "hangyakiralyno"
+  - "pok"
+locations:
+  - "erdo"
+  - "ret"
+  - "hegyteto"
+  - "patak"
+objects:
+  - "leggomb"
+themes:
+  - "segites"
+  - "baratsag"
+  - "termeszet"
+seasons:
+  - "nyar"
+holidays: []

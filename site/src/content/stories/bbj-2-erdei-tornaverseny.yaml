@@ -1,0 +1,33 @@
+id: "bbj-2-erdei-tornaverseny"
+title: "Erdei tornaverseny"
+volume: "jelmezbalban"
+order: 2
+pageStart: 23
+pageEnd: 44
+summary: "A tavaszi tornaversenyen minden barát más számban ügyes, és bár Bogyónak sokáig semmi nem sikerül, végül a célbadobásban győz, mert mindenki tehetséges valamiben."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "pihe"
+  - "baltazar"
+  - "vendel"
+  - "alfonz"
+  - "ugri"
+  - "dome"
+  - "lili"
+  - "szello"
+locations:
+  - "ret"
+  - "to"
+  - "erdo"
+objects:
+  - "erem"
+  - "toboz"
+themes:
+  - "verseny"
+  - "baratsag"
+  - "segites"
+  - "jatszas"
+seasons:
+  - "tavasz"
+holidays: []

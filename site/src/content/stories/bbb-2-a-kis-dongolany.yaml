@@ -1,0 +1,33 @@
+id: "bbb-2-a-kis-dongolany"
+title: "A kis dongólány"
+volume: "beteg"
+order: 2
+pageStart: 24
+pageEnd: 45
+summary: "Tavasszal a barátok megismerkednek Dorottyával, a vándorló dongólánnyal, és a mese a barátkozásról és az összetartozásról szól."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "baltazar"
+  - "dorottya"
+  - "sun-soma"
+  - "pihe"
+  - "vendel"
+  - "gombi"
+locations:
+  - "ret"
+  - "erdo"
+  - "patak"
+  - "domb"
+objects:
+  - "ejtoernyo"
+  - "sunifogat"
+  - "orgona"
+themes:
+  - "baratsag"
+  - "jatszas"
+  - "segites"
+  - "termeszet"
+seasons:
+  - "tavasz"
+holidays: []

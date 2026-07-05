@@ -1,0 +1,31 @@
+id: "bbro-2-a-vizicsiga"
+title: "A vízicsiga"
+volume: "rokonai"
+order: 2
+pageStart: 24
+pageEnd: 46
+summary: "Bogyó rokonokra vágyik, ezért barátaival Soma sün fogatán a Kerek-tóhoz mennek, ahol a vízbe gurult hintót Csiga Csaba, a vízicsiga és a vízisikló segítségével találják meg, és Bogyó rátalál rokonára."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "pihe"
+  - "baltazar"
+  - "sun-soma"
+  - "csiga-csaba"
+  - "vizisiklo"
+locations:
+  - "ret"
+  - "kerek-to"
+  - "fenyoerdo"
+objects:
+  - "gesztenyehinto"
+  - "sunfogat"
+  - "levegopalack"
+themes:
+  - "rokonok"
+  - "csalad"
+  - "baratsag"
+  - "segites"
+  - "jatszas"
+seasons: []
+holidays: []

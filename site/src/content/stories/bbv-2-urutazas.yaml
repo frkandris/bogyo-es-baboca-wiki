@@ -1,0 +1,27 @@
+id: "bbv-2-urutazas"
+title: "Űrutazás"
+volume: "vilagot-lat"
+order: 2
+pageStart: 24
+pageEnd: 45
+summary: "Egy űrhajó a távoli Dion bolygóra repíti Bogyót és Babócát, és a mese az űrutazásról és egy félreértés tisztázásáról szól."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "felix"
+  - "golyo"
+locations:
+  - "ret"
+  - "vilagur"
+  - "dion"
+objects:
+  - "urhajo"
+  - "urruha"
+themes:
+  - "utazas"
+  - "felfedezes"
+  - "baratsag"
+  - "segites"
+seasons:
+  - "nyar"
+holidays: []

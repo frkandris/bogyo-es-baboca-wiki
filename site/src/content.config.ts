@@ -31,6 +31,7 @@ const characters = defineCollection({
     id: z.string().optional(),
     name: z.string(),
     kind: z.enum(['person', 'animal', 'toy', 'other']).default('person'),
+    species: z.string().optional(), // faj/szerep, pl. "Csigafiú", "Méhecske"
     description: z.string().optional(),
   }),
 });
@@ -51,6 +52,7 @@ const objects = defineCollection({
     id: z.string().optional(),
     name: z.string(),
     category: z.enum(['object', 'vehicle']).default('object'),
+    group: z.string().optional(), // al-csoport, pl. "hangszer", "etel", "novény"
     description: z.string().optional(),
   }),
 });

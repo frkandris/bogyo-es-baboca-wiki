@@ -4,7 +4,7 @@ volume: "sportol"
 order: 2
 pageStart: 31
 pageEnd: 52
-summary: "Milla the snowbug invites everyone skiing and builds skis for those lacking them, but shy Pihe hides that she cannot ski, crashes badly, and is rescued then taught."
+summary: "Milla síelni hívja a barátokat, de a félénk Pihe titkolja, hogy nem tud síelni — a mese a bátorságról és a segítségkérésről szól."
 characters:
   - "milla"
   - "bogyo"
@@ -13,7 +13,7 @@ characters:
   - "baboca"
   - "baltazar"
   - "vendel"
-  - "zold-kukac"
+  - "kukac"
   - "bagolydoktor"
 locations:
   - "hegy"

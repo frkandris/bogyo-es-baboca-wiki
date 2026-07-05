@@ -1,0 +1,32 @@
+id: "bbb-1-a-fulgyulladas"
+title: "A fülgyulladás"
+volume: "beteg"
+order: 1
+pageStart: 2
+pageEnd: 23
+summary: "Ősszel Bogyó fülgyulladást kap, és a mese arról szól, hogyan gondoskodnak róla a barátai és a bagolydoktor, amíg végül meggyógyul."
+characters:
+  - "bogyo"
+  - "baboca"
+  - "bagolydoktor"
+  - "baltazar"
+  - "pihe"
+  - "vendel"
+locations:
+  - "bogyo-haza"
+  - "tolgyfa"
+  - "erdo"
+  - "patak"
+objects:
+  - "sapka"
+  - "orvossag"
+  - "orvosi-taska"
+themes:
+  - "betegseg"
+  - "orvos"
+  - "gondoskodas"
+  - "segites"
+  - "baratsag"
+seasons:
+  - "osz"
+holidays: []

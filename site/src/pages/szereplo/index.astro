@@ -26,7 +26,7 @@ const groups = kindOrder
         {g.items.map((c) => (
           <a class="card" href={href(`/${SEG.character}/${c.id}`)}>
             <h3>{c.data.name}</h3>
-            <div class="meta">{counts.get(c.id) ?? 0} mesében</div>
+            <div class="meta">{c.data.species ? `${c.data.species} · ` : ''}{counts.get(c.id) ?? 0} mesében</div>
             {c.data.description && <p class="small muted" style="margin:.4em 0 0">{c.data.description}</p>}
           </a>
         ))}

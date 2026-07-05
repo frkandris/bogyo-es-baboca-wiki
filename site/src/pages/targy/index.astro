@@ -8,34 +8,47 @@ const objs = await getCollection('objects');
 const counts = usageCounts(await allStories(), 'objects');
 const sortByCount = (a: any, b: any) =>
   (counts.get(b.id) ?? 0) - (counts.get(a.id) ?? 0) || a.data.name.localeCompare(b.data.name, 'hu');
-const vehicles = objs.filter((o) => o.data.category === 'vehicle').sort(sortByCount);
-const things = objs.filter((o) => o.data.category !== 'vehicle').sort(sortByCount);
 
-const Card = 'a';
+const vehicles = objs.filter((o) => o.data.category === 'vehicle').sort(sortByCount);
+const things = objs.filter((o) => o.data.category !== 'vehicle');
+
+// csoportosítás a `group` mező szerint; a csoport nélküliek az "Egyéb tárgyak" alá
+const groupMap = new Map<string, typeof things>();
+const ungrouped: typeof things = [];
+for (const o of things) {
+  const g = o.data.group;
+  if (g) {
+    if (!groupMap.has(g)) groupMap.set(g, []);
+    groupMap.get(g)!.push(o);
+  } else ungrouped.push(o);
+}
+const groups = [...groupMap.entries()]
+  .map(([name, items]) => ({ name, items: items.sort(sortByCount) }))
+  .sort((a, b) => b.items.length - a.items.length || a.name.localeCompare(b.name, 'hu'));
+
+const sections = [
+  ...(vehicles.length ? [{ name: LABEL.vehicles, items: vehicles }] : []),
+  ...groups,
+  ...(ungrouped.length ? [{ name: 'Egyéb tárgyak', items: ungrouped.sort(sortByCount) }] : []),
+];
 ---
 
-<Base title={`${LABEL.objects} és ${LABEL.vehicles.toLowerCase()}`}>
+<Base title={LABEL.objects}>
   <div class="crumbs"><a href={href('/')}>Főoldal</a> › {LABEL.objects}</div>
   <h1>{LABEL.objects} és {LABEL.vehicles.toLowerCase()}</h1>
-  <p class="lead muted">Tárgyak és járművek, amelyekre a gyerekek gyakran rákérdeznek.</p>
+  <p class="lead muted">Tárgyak, ételek, hangszerek, növények és járművek a mesékből — csoportosítva.</p>
 
-  <div class="section-title"><h2>{LABEL.vehicles}</h2><span class="count">{vehicles.length} db</span></div>
-  <div class="grid">
-    {vehicles.map((c) => (
-      <a class="card" href={href(`/${SEG.object}/${c.id}`)}>
-        <h3>{c.data.name}</h3>
-        <div class="meta">{counts.get(c.id) ?? 0} mesében</div>
-      </a>
-    ))}
-  </div>
-
-  <div class="section-title"><h2>{LABEL.objects}</h2><span class="count">{things.length} db</span></div>
-  <div class="grid">
-    {things.map((c) => (
-      <a class="card" href={href(`/${SEG.object}/${c.id}`)}>
-        <h3>{c.data.name}</h3>
-        <div class="meta">{counts.get(c.id) ?? 0} mesében</div>
-      </a>
-    ))}
-  </div>
+  {sections.map((sec) => (
+    <>
+      <div class="section-title"><h2>{sec.name}</h2><span class="count">{sec.items.length} db</span></div>
+      <div class="grid">
+        {sec.items.map((c) => (
+          <a class="card" href={href(`/${SEG.object}/${c.id}`)}>
+            <h3>{c.data.name}</h3>
+            <div class="meta">{counts.get(c.id) ?? 0} mesében</div>
+          </a>
+        ))}
+      </div>
+    </>
+  ))}
 </Base>
