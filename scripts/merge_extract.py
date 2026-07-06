@@ -25,7 +25,9 @@ GENERATED = ["stories", "characters", "locations", "objects", "themes", "seasons
 CATEGORY_OVERRIDES = {"babakocsi": "vehicle"}
 
 # theme slug aliases -> canonical slug (merges synonym themes)
-THEME_ALIASES = {}
+THEME_ALIASES = {
+    "veszekedes": "veszekedes-kibekules",
+}
 # kanonikus, ékezetes címkék — az ügynökök gyakran ékezet nélküli slugból
 # generálják a label-t, ezért a helyes magyar címke itt mindig felülírja.
 CANONICAL_THEME_LABELS = {
