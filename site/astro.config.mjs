@@ -45,13 +45,27 @@ function publishLlmWiki() {
     const files = entries.filter((e) => e.isFile()).map((e) => e.name).sort(az);
     for (const d of dirs) publish(dirSrc[d], join(out, d), `${rel}${d}/`);
     for (const f of files) copyFileSync(join(src, f), join(out, f));
-    const width = Math.max(28, ...dirs.map((d) => d.length + 3), ...files.map((f) => f.length + 2));
+    // Each folder is shown expanded: its subfolders as a tree beneath it.
+    // Rows: [tree prefix, label, href, comment].
+    const subtree = (dir, href, prefix) => {
+      const subs = readdirSync(dir, { withFileTypes: true })
+        .filter((e) => e.isDirectory() && !e.name.startsWith('.')).map((e) => e.name).sort(az);
+      return subs.flatMap((s, i) => {
+        const last = i === subs.length - 1;
+        return [[prefix + (last ? '└── ' : '├── '), `${s}/`, `${href}${s}/`, dirComment(join(dir, s), s)],
+          ...subtree(join(dir, s), `${href}${s}/`, prefix + (last ? '    ' : '│   '))];
+      });
+    };
+    const entryRows = [
+      ...dirs.flatMap((d) => [['', `${d}/`, `${d}/`, dirComment(dirSrc[d], d)], ...subtree(dirSrc[d], `${d}/`, '')]),
+      ...files.map((f) => ['', f, f, comment(join(src, f))]),
+    ];
+    const width = Math.max(28, ...entryRows.map(([p, l]) => p.length + l.length + 2));
     const rows = [
       ...(rel === 'wiki/' ? [] : ['<a href="../">../</a>']),
-      ...dirs.map((d) => [`${d}/`, dirComment(dirSrc[d], d)]),
-      ...files.map((f) => [f, comment(join(src, f))]),
-    ].map((r) => (typeof r === 'string' ? r
-      : `<a href="${esc(r[0])}">${esc(r[0])}</a>${' '.repeat(width - r[0].length)}${esc(r[1])}`));
+      ...entryRows.map(([p, l, h, c]) =>
+        `${p}<a href="${esc(h)}">${esc(l)}</a>${' '.repeat(width - p.length - l.length)}${esc(c)}`),
+    ];
     writeFileSync(join(out, 'index.html'), `<!doctype html>
 <html lang="hu"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${BASE}/${rel}</title></head><body>
