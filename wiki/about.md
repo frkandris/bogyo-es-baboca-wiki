@@ -3,7 +3,7 @@ type: "Guide"
 title: "Bogyó és Babóca wiki — a tudáskatalógusról (LLM wiki)"
 description: "Mi ez a wiki/ mappa, mire való, és hogyan tartsd karban."
 tags: ["meta", "okf", "karbantartas"]
-timestamp: "2026-07-05"
+timestamp: "2026-10-28"
 ---
 
 # Bogyó és Babóca wiki — a tudáskatalógusról (LLM wiki)
@@ -19,6 +19,9 @@ koncepció külön fájl. Minta: Andrej Karpathy LLM-wiki gondolata, három rét
 2. **Forrás-igazság** — `site/src/content/` (Zod-sémával validált YAML), lásd
    [data-model](data-model.md).
 3. **Ez a wiki** — a *hogyan-működik* réteg, ami az idővel bővül.
+
+Online is elérhető (nyers markdown, a build része): https://frkandris.github.io/bogyo-es-baboca-wiki/wiki/ —
+lásd [deploy](deploy.md).
 
 ## Tartalom
 - [Áttekintés](overview.md) — mi ez a projekt, célok, jog

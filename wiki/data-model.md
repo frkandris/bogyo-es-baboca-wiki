@@ -3,7 +3,7 @@ type: "Reference"
 title: "Adatmodell és kontrollált szótár"
 description: "Entitások, mezők, slug/címke konvenció, kontrollált szótár."
 tags: ["schema", "szotar", "slug"]
-timestamp: "2026-07-05"
+timestamp: "2026-10-28"
 ---
 
 # Adatmodell és kontrollált szótár

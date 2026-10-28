@@ -3,7 +3,7 @@ type: "Pipeline"
 title: "Extrakciós pipeline"
 description: "PDF/DJVU/JPG → PNG oldalkép → vízió-ügynök → JSON → merge → content YAML."
 tags: ["extrakcio", "agents", "render"]
-timestamp: "2026-07-05"
+timestamp: "2026-10-28"
 ---
 
 # Extrakciós pipeline

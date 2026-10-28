@@ -3,7 +3,7 @@ type: "Convention"
 title: "Konvenciók"
 description: "Ékezetek, slugok, csak-metaadat/jog, magyar UI."
 tags: ["konvencio", "jog", "ekezetek"]
-timestamp: "2026-07-05"
+timestamp: "2026-10-28"
 ---
 
 # Konvenciók

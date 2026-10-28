@@ -3,7 +3,7 @@ type: "Architecture"
 title: "Architektúra — adathalmaz, nem dokumentumok"
 description: "Astro content collections + Zod séma; minden oldal generált, a kereszthivatkozások levezetettek."
 tags: ["astro", "zod", "content-collections"]
-timestamp: "2026-07-05"
+timestamp: "2026-10-28"
 ---
 
 # Architektúra — „adathalmaz, nem dokumentumok"

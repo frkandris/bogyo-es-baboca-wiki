@@ -3,7 +3,7 @@ type: "Runbook"
 title: "Új kötet hozzáadása"
 description: "Lépésről lépésre: egy új kötet feldolgozása és publikálása."
 tags: ["runbook", "kotet"]
-timestamp: "2026-07-05"
+timestamp: "2026-10-28"
 ---
 
 # Runbook — új kötet hozzáadása

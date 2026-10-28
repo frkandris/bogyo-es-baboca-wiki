@@ -3,7 +3,7 @@ type: "Reference"
 title: "Astro oldal — oldalak, kereső, szűrők"
 description: "Az oldalgeneráló Astro projekt felépítése és a kliensoldali kereső/szűrő."
 tags: ["astro", "kereso", "szuro"]
-timestamp: "2026-07-05"
+timestamp: "2026-10-28"
 ---
 
 # Astro oldal

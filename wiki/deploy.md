@@ -3,7 +3,7 @@ type: "Runbook"
 title: "Deploy — GitHub Actions → Pages"
 description: "Hogyan épül és publikálódik az oldal."
 tags: ["deploy", "github-actions", "pages"]
-timestamp: "2026-07-05"
+timestamp: "2026-10-28"
 ---
 
 # Deploy
@@ -13,6 +13,10 @@ timestamp: "2026-07-05"
 - **Lépések:** Node telepítés → `npm ci` a `site/`-ban → `npm run build` →
   a `site/dist` feltöltése GitHub Pages-artifactként → deploy.
 - **URL:** https://frkandris.github.io/bogyo-es-baboca-wiki/ (project pages, base = a repó neve).
+- **Ez a wiki is kimegy:** az `astro.config.mjs` `publish-llm-wiki` integrációja a
+  build végén a `wiki/*.md`-t változatlanul a `dist/wiki/`-be másolja, mellé egy
+  `index.html` listát generál → https://frkandris.github.io/bogyo-es-baboca-wiki/wiki/ (nyers markdown: pl.
+  https://frkandris.github.io/bogyo-es-baboca-wiki/wiki/index.md). Új wiki-oldalhoz nem kell semmit állítani.
 - **Ellenőrzés:** a build lógó hivatkozáson elbukik → a hibás content nem megy ki.
 - **Analytics:** Cloudflare Web Analytics beacon (süti nélkül).
 

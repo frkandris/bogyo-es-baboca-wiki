@@ -3,7 +3,7 @@ type: "Overview"
 title: "Bogyó és Babóca wiki — áttekintés"
 description: "Statikus, kereshető katalógus Bartos Erika Bogyó és Babóca meséiről."
 tags: ["projekt", "cel", "jog"]
-timestamp: "2026-07-05"
+timestamp: "2026-10-28"
 ---
 
 # Bogyó és Babóca wiki — áttekintés
@@ -13,7 +13,7 @@ könyveiről. Fő cél: a szülők gyorsan megtalálják, **melyik mese melyik k
 van, és böngészhessenek szereplő, helyszín, tárgy, téma, évszak és ünnep szerint.
 
 Jelenlegi méret: **22 kötet · 62 mese · 49
-szereplő · 30 helyszín · 105 tárgy · 32 téma**.
+szereplő · 30 helyszín · 105 tárgy · 31 téma**.
 
 ## Alapelvek
 - **Csak metaadat + saját szavas összefoglaló.** Bartos Erika a szerző és a

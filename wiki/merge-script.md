@@ -3,7 +3,7 @@ type: "Script"
 title: "merge_extract.py — kanonikus szabályok"
 description: "Dedup, kanonikus címkék, aliasok, species, tárgy-csoportok, integritás."
 tags: ["merge", "python", "normalizalas"]
-timestamp: "2026-07-05"
+timestamp: "2026-10-28"
 ---
 
 # `scripts/merge_extract.py`

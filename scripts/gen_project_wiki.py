@@ -13,7 +13,10 @@ layer that compounds over time).
 The prose is identical across both repos (shared tech); only the title, series,
 base URL, sibling link and a few live counts differ, filled from CONFIG + content.
 
-Usage: python3 scripts/gen_project_wiki.py [<repo_root>]
+Usage: python3 scripts/gen_project_wiki.py [<repo_root>] [--note "naplóbejegyzés"]
+
+log.md is preserved across runs: each run prepends a dated entry (the --note
+text, or a default "regenerated" line) above the existing history.
 """
 import sys, pathlib, datetime, re
 
@@ -62,7 +65,7 @@ def doc(type_, title, desc, tags, body):
     return fm(type_, title, desc, tags) + "\n\n" + body.strip() + "\n"
 
 
-def build(repo):
+def build(repo, note=None):
     cfg = CONFIG.get(repo.name)
     if not cfg:
         sys.exit(f"No CONFIG for repo '{repo.name}'")
@@ -70,6 +73,7 @@ def build(repo):
     T, S = cfg["title"], cfg["series"]
     sib_name, sib_url = cfg["sibling"]
     wiki = repo / "wiki"
+    old_log = (wiki / "log.md").read_text(encoding="utf-8") if (wiki / "log.md").exists() else ""
     if wiki.exists():
         for f in wiki.glob("*.md"):
             f.unlink()
@@ -96,6 +100,9 @@ koncepció külön fájl. Minta: Andrej Karpathy LLM-wiki gondolata, három rét
 2. **Forrás-igazság** — `site/src/content/` (Zod-sémával validált YAML), lásd
    [data-model](data-model.md).
 3. **Ez a wiki** — a *hogyan-működik* réteg, ami az idővel bővül.
+
+Online is elérhető (nyers markdown, a build része): {cfg['base']}/wiki/ —
+lásd [deploy](deploy.md).
 
 ## Tartalom
 - [Áttekintés](overview.md) — mi ez a projekt, célok, jog
@@ -331,6 +338,10 @@ oldódnia; lógónál figyelmeztet és stubot készít. „No dangling reference
 - **Lépések:** Node telepítés → `npm ci` a `site/`-ban → `npm run build` →
   a `site/dist` feltöltése GitHub Pages-artifactként → deploy.
 - **URL:** {cfg['base']}/ (project pages, base = a repó neve).
+- **Ez a wiki is kimegy:** az `astro.config.mjs` `publish-llm-wiki` integrációja a
+  build végén a `wiki/*.md`-t változatlanul a `dist/wiki/`-be másolja, mellé egy
+  `index.html` listát generál → {cfg['base']}/wiki/ (nyers markdown: pl.
+  {cfg['base']}/wiki/index.md). Új wiki-oldalhoz nem kell semmit állítani.
 - **Ellenőrzés:** a build lógó hivatkozáson elbukik → a hibás content nem megy ki.
 - **Analytics:** Cloudflare Web Analytics beacon (süti nélkül).
 
@@ -401,21 +412,29 @@ Nem a mesetartalmat katalogizálja — azt a weboldal teszi.
 """)
 
     # ---------------- log.md (reserved) --------------------------------------
-    w("log.md", f"""# Változásnapló
-
-## {TODAY}
-* **Inicializálás**: projekt/tech LLM-wiki (OKF) létrehozva — architektúra,
-  pipeline, merge, Astro, deploy, konvenciók, runbook.
-""")
+    entry = f"## {TODAY}\n* " + (note or
+        f"**Újragenerálva** a {c['volumes']} kötet · {c['stories']} mese állapotából.") + "\n"
+    history = old_log.split("\n", 1)[1].lstrip("\n") if old_log.startswith("# ") else ""
+    if not history:
+        history = (f"## {TODAY}\n* **Inicializálás**: projekt/tech LLM-wiki (OKF) létrehozva — "
+                   "architektúra,\n  pipeline, merge, Astro, deploy, konvenciók, runbook.\n")
+        entry = ""
+    w("log.md", "# Változásnapló\n\n" + entry + ("\n" if entry else "") + history)
 
     n = len(list(wiki.glob("*.md")))
     print(f"Project wiki written to {wiki}  ({n} concept files)")
 
 
 def main():
-    repo = pathlib.Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else \
+    args = sys.argv[1:]
+    note = None
+    if "--note" in args:
+        i = args.index("--note")
+        note = args[i + 1]
+        del args[i:i + 2]
+    repo = pathlib.Path(args[0]).resolve() if args else \
            pathlib.Path(__file__).resolve().parents[1]
-    build(repo)
+    build(repo, note)
 
 
 if __name__ == "__main__":
