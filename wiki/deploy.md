@@ -14,9 +14,11 @@ timestamp: "2026-10-28"
   a `site/dist` feltöltése GitHub Pages-artifactként → deploy.
 - **URL:** https://frkandris.github.io/bogyo-es-baboca-wiki/ (project pages, base = a repó neve).
 - **Ez a wiki is kimegy:** az `astro.config.mjs` `publish-llm-wiki` integrációja a
-  build végén a `wiki/*.md`-t változatlanul a `dist/wiki/`-be másolja, mellé egy
-  `index.html` listát generál → https://frkandris.github.io/bogyo-es-baboca-wiki/wiki/ (nyers markdown: pl.
-  https://frkandris.github.io/bogyo-es-baboca-wiki/wiki/index.md). Új wiki-oldalhoz nem kell semmit állítani.
+  build végén a `wiki/` tartalmát változatlanul a `dist/wiki/`-be másolja, mellé
+  `content/` néven a könyvek adatait (`site/src/content` YAML), és minden mappába
+  egyszerű könyvtárlistát (`index.html`: mappák, majd fájlok a–z, megjegyzéssel)
+  generál → https://frkandris.github.io/bogyo-es-baboca-wiki/wiki/ (nyers markdown: pl. https://frkandris.github.io/bogyo-es-baboca-wiki/wiki/index.md).
+  Új wiki-oldalhoz nem kell semmit állítani.
 - **Ellenőrzés:** a build lógó hivatkozáson elbukik → a hibás content nem megy ki.
 - **Analytics:** Cloudflare Web Analytics beacon (süti nélkül).
 

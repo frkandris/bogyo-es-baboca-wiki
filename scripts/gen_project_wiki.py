@@ -339,9 +339,11 @@ oldódnia; lógónál figyelmeztet és stubot készít. „No dangling reference
   a `site/dist` feltöltése GitHub Pages-artifactként → deploy.
 - **URL:** {cfg['base']}/ (project pages, base = a repó neve).
 - **Ez a wiki is kimegy:** az `astro.config.mjs` `publish-llm-wiki` integrációja a
-  build végén a `wiki/*.md`-t változatlanul a `dist/wiki/`-be másolja, mellé egy
-  `index.html` listát generál → {cfg['base']}/wiki/ (nyers markdown: pl.
-  {cfg['base']}/wiki/index.md). Új wiki-oldalhoz nem kell semmit állítani.
+  build végén a `wiki/` tartalmát változatlanul a `dist/wiki/`-be másolja, mellé
+  `content/` néven a könyvek adatait (`site/src/content` YAML), és minden mappába
+  egyszerű könyvtárlistát (`index.html`: mappák, majd fájlok a–z, megjegyzéssel)
+  generál → {cfg['base']}/wiki/ (nyers markdown: pl. {cfg['base']}/wiki/index.md).
+  Új wiki-oldalhoz nem kell semmit állítani.
 - **Ellenőrzés:** a build lógó hivatkozáson elbukik → a hibás content nem megy ki.
 - **Analytics:** Cloudflare Web Analytics beacon (süti nélkül).
 
