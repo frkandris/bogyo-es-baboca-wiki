@@ -18,7 +18,10 @@ timestamp: "2026-10-28"
   `content/` néven a könyvek adatait (`site/src/content` YAML), és minden mappába
   egyszerű könyvtárlistát (`index.html`: mappák, majd fájlok a–z, megjegyzéssel)
   generál → https://frkandris.github.io/bogyo-es-baboca-wiki/wiki/ (nyers markdown: pl. https://frkandris.github.io/bogyo-es-baboca-wiki/wiki/index.md).
-  Új wiki-oldalhoz nem kell semmit állítani.
+  A technikai oldalak (`TECH_PAGES` az `astro.config.mjs`-ben) a megjelenítésben
+  egy virtuális `tech/` mappába kerülnek, a relatív linkjeik átíródnak; a repóban
+  a `wiki/` lapos marad. Új wiki-oldal a gyökérbe kerül; ha technikai, vedd fel a
+  `TECH_PAGES`-be.
 - **Ellenőrzés:** a build lógó hivatkozáson elbukik → a hibás content nem megy ki.
 - **Analytics:** Cloudflare Web Analytics beacon (süti nélkül).
 

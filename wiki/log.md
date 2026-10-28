@@ -1,6 +1,9 @@
 # Változásnapló
 
 ## 2026-10-28
+* **Online lista**: a technikai oldalak a megjelenítésben virtuális `tech/` mappába kerültek (a repóban a wiki/ lapos marad).
+
+## 2026-10-28
 * **Online lista**: a /wiki/ könyvtárlistaként jelenik meg, és `content/` néven a könyvek adatai (YAML) is látszanak benne.
 
 ## 2026-10-28

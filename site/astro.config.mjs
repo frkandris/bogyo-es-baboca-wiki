@@ -1,8 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { readdirSync, readFileSync, mkdirSync, copyFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readdirSync, readFileSync, mkdirSync, copyFileSync, writeFileSync, existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
+import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 
 const BASE = '/bogyo-es-baboca-wiki';
@@ -10,9 +11,14 @@ const BASE = '/bogyo-es-baboca-wiki';
 // Publishes the repo-root wiki/ (project/tech LLM wiki, OKF markdown) as-is
 // under <base>/wiki/, with a plain directory listing (index.html) in every
 // folder: folders first, then files, a–z, each with a short comment.
-// The book data (site/src/content YAML) is mounted alongside as content/.
+// The book data (site/src/content YAML) is mounted alongside as content/, and
+// the technical pages are grouped into a virtual tech/ folder (display only:
+// in the repo they stay flat in wiki/; their relative links are rewritten).
+const TECH_PAGES = ['architecture.md', 'conventions.md', 'data-model.md', 'deploy.md', 'merge-script.md',
+  'pipeline-extraction.md', 'repo-structure.md', 'runbook-add-volume.md', 'site-astro.md'];
 const DATA_DIRS = {
   content: 'A könyvek adatai — Zod-sémával validált YAML (forrás: site/src/content)',
+  tech: 'A projekt technikai működése — architektúra, pipeline, deploy, runbook',
   volumes: 'kötetek', stories: 'mesék', characters: 'szereplők', locations: 'helyszínek',
   objects: 'tárgyak', themes: 'témák', seasons: 'évszakok', holidays: 'ünnepek',
 };
@@ -31,10 +37,22 @@ function publishLlmWiki() {
   };
   const dirComment = (dir, name) => {
     if (DATA_DIRS[name]) {
-      const n = readdirSync(dir).filter((f) => f.endsWith('.yaml')).length;
+      const n = readdirSync(dir).filter((f) => /\.(ya?ml|md)$/.test(f)).length;
       return n ? `${DATA_DIRS[name]} (${n})` : DATA_DIRS[name];
     }
     return comment(join(dir, 'index.md'));
+  };
+  // Copies wiki/ into stage/, moving TECH_PAGES into stage/tech/ and fixing
+  // the relative .md links between the two levels.
+  const stageWiki = (wiki, stage) => {
+    mkdirSync(join(stage, 'tech'));
+    const inTech = (f) => TECH_PAGES.includes(f);
+    for (const f of readdirSync(wiki)) {
+      if (!f.endsWith('.md')) { copyFileSync(join(wiki, f), join(stage, f)); continue; }
+      const text = readFileSync(join(wiki, f), 'utf-8').replace(/\]\(([\w-]+\.md)(#[^)]*)?\)/g, (m, t, h = '') =>
+        inTech(f) === inTech(t) ? m : `](${inTech(t) ? 'tech/' : '../'}${t}${h})`);
+      writeFileSync(join(stage, inTech(f) ? 'tech' : '', f), text);
+    }
   };
   const publish = (src, out, rel, mounts = {}) => {
     mkdirSync(out, { recursive: true });
@@ -85,8 +103,15 @@ ${rows.join('\n')}
     name: 'publish-llm-wiki',
     hooks: {
       'astro:build:done': ({ dir }) => {
-        publish(fileURLToPath(new URL('../wiki/', import.meta.url)), fileURLToPath(new URL('wiki/', dir)), 'wiki/',
-          { content: fileURLToPath(new URL('./src/content/', import.meta.url)) });
+        const wiki = fileURLToPath(new URL('../wiki/', import.meta.url));
+        const stage = mkdtempSync(join(tmpdir(), 'llm-wiki-'));
+        try {
+          stageWiki(wiki, stage);
+          publish(stage, fileURLToPath(new URL('wiki/', dir)), 'wiki/',
+            { content: fileURLToPath(new URL('./src/content/', import.meta.url)) });
+        } finally {
+          rmSync(stage, { recursive: true, force: true });
+        }
       },
     },
   };
