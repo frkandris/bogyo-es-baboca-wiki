@@ -44,7 +44,12 @@ function publishLlmWiki() {
     const dirs = Object.keys(dirSrc).sort(az);
     const files = entries.filter((e) => e.isFile()).map((e) => e.name).sort(az);
     for (const d of dirs) publish(dirSrc[d], join(out, d), `${rel}${d}/`);
-    for (const f of files) copyFileSync(join(src, f), join(out, f));
+    // GitHub Pages serves .yaml as text/yaml without a charset, so browsers fall
+    // back to Latin-1 and mangle the accents; a UTF-8 BOM makes them read UTF-8.
+    for (const f of files) {
+      if (/\.ya?ml$/.test(f)) writeFileSync(join(out, f), '﻿' + readFileSync(join(src, f), 'utf-8'));
+      else copyFileSync(join(src, f), join(out, f));
+    }
     // Each folder is shown expanded: its subfolders as a tree beneath it.
     // Rows: [tree prefix, label, href, comment].
     const subtree = (dir, href, prefix) => {
