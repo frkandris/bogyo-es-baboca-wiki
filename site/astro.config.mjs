@@ -68,15 +68,21 @@ function publishLlmWiki() {
       if (/\.ya?ml$/.test(f)) writeFileSync(join(out, f), '﻿' + readFileSync(join(src, f), 'utf-8'));
       else copyFileSync(join(src, f), join(out, f));
     }
-    // Each folder is shown expanded: its subfolders as a tree beneath it.
+    // Each folder is shown expanded as a tree beneath it: its subfolders, and
+    // its files too unless there are more than TREE_MAX_FILES (the data folders).
     // Rows: [tree prefix, label, href, comment].
+    const TREE_MAX_FILES = 20;
     const subtree = (dir, href, prefix) => {
-      const subs = readdirSync(dir, { withFileTypes: true })
-        .filter((e) => e.isDirectory() && !e.name.startsWith('.')).map((e) => e.name).sort(az);
-      return subs.flatMap((s, i) => {
-        const last = i === subs.length - 1;
-        return [[prefix + (last ? '└── ' : '├── '), `${s}/`, `${href}${s}/`, dirComment(join(dir, s), s)],
-          ...subtree(join(dir, s), `${href}${s}/`, prefix + (last ? '    ' : '│   '))];
+      const list = readdirSync(dir, { withFileTypes: true }).filter((e) => !e.name.startsWith('.'));
+      const subs = list.filter((e) => e.isDirectory()).map((e) => e.name).sort(az);
+      const fs = list.filter((e) => e.isFile()).map((e) => e.name).sort(az);
+      const items = [...subs.map((s) => [s, true]), ...(fs.length <= TREE_MAX_FILES ? fs.map((f) => [f, false]) : [])];
+      return items.flatMap(([n, isDir], i) => {
+        const last = i === items.length - 1;
+        const branch = prefix + (last ? '└── ' : '├── ');
+        if (!isDir) return [[branch, n, `${href}${n}`, comment(join(dir, n))]];
+        return [[branch, `${n}/`, `${href}${n}/`, dirComment(join(dir, n), n)],
+          ...subtree(join(dir, n), `${href}${n}/`, prefix + (last ? '    ' : '│   '))];
       });
     };
     const entryRows = [
