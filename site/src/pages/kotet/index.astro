@@ -20,7 +20,7 @@ volumes.sort((a, b) => a.data.title.localeCompare(b.data.title, 'hu'));
       <a class="card" href={href(`/${SEG.volume}/${v.id}`)}>
         <h3>{v.data.title}</h3>
         <div class="meta">{v.data.series} sorozat{v.data.year ? ` · ${v.data.year}` : ''}</div>
-        <p class="small muted" style="margin:.5em 0 0">{countFor(v.id)} mese{v.data.description ? ` · ${v.data.description}` : ''}</p>
+        <p class="small muted" style="margin:.5em 0 0">{countFor(v.id)} mese</p>
       </a>
     ))}
   </div>

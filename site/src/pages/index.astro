@@ -64,7 +64,6 @@ const cats = [
         <div class="meta">{v.data.series} sorozat</div>
         <p class="small muted" style="margin:.5em 0 0">
           {stories.filter((s) => s.data.volume.id === v.id).length} mese
-          {v.data.description ? ` · ${v.data.description}` : ''}
         </p>
       </a>
     ))}
